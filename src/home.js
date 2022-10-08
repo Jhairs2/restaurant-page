@@ -1,15 +1,17 @@
 
-export const homePageMod = (() => {
+const homePageMod = (() => {
     const content = document.querySelector("#content");
 
     function makeHeader() {
         const header = document.createElement("header");
         header.classList.add("header-container");
-        return header
+        header.append(makeHeaderLinksAndTitle().headerTitle, makeHeaderLinksAndTitle().tabList, makeHeaderIconsAndButton());
+
+        return header;
     }
 
-    function addHeaderContent() {
 
+    const makeHeaderLinksAndTitle = () => {
         const headerTitle = document.createElement("span");
         headerTitle.textContent = "Waffle World";
 
@@ -25,10 +27,39 @@ export const homePageMod = (() => {
         tab3.textContent = "About";
         tabList.append(tab1, tab2, tab3);
 
-        return makeHeader().append(headerTitle, tabList);
+        return { headerTitle, tabList }
     }
 
-    function createHomePage() {
-        return content.append(addHeaderContent);
+
+    const makeHeaderIconsAndButton = () => {
+        const iconContainer = document.createElement("div");
+
+        const headerImage1 = document.createElement("img");
+        const headerImage2 = document.createElement("img");
+        const headerImage3 = document.createElement("img");
+        const headerButton = document.createElement("button");
+
+        iconContainer.classList.add("icon-container");
+        headerImage1.classList.add("header-icon");
+        headerImage2.classList.add("header-icon");
+        headerImage3.classList.add("header-icon");
+        headerButton.classList.add("header-button");
+
+        headerButton.textContent = "Order Online";
+
+        iconContainer.append(headerImage1, headerImage2, headerImage3, headerButton);
+
+        return iconContainer;
+
     }
+
+
+    function createHomePage() {
+
+        return content.append(makeHeader());
+    }
+
+    return { createHomePage };
 })
+
+export default homePageMod;
