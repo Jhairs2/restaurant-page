@@ -1,0 +1,35 @@
+* , *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    height: 100%;
+    width: 100%
+}
+
+
+body {
+    height:100%;
+    width: 100%;
+}
+
+
+#content {
+    height: 100%;
+    width: 100%;
+}
+
+.header-container {
+    font-size: 1.5rem;
+    padding: 1em 3em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab-container {
+    display: flex;
+    gap: 3em;
+}
