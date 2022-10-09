@@ -1,10 +1,13 @@
+// import relevant packages
 import { loremIpsum } from "lorem-ipsum";
 
 
+// Create homePage Module
 const homePageMod = (() => {
     const content = document.querySelector("#content");
 
 
+    // Making header title, links, and buttons
     const makeHeaderTitle = () => {
         const headerTitle = document.createElement("span");
         headerTitle.textContent = "Waffle World";
@@ -25,7 +28,7 @@ const homePageMod = (() => {
         tab3.textContent = "About";
         tabList.append(tab1, tab2, tab3);
 
-        return tabList; 
+        return tabList;
     }
 
 
@@ -60,6 +63,7 @@ const homePageMod = (() => {
 
     }
 
+    // Create header
     const makeHeader = () => {
         const header = document.createElement("header");
         header.classList.add("header-container");
@@ -68,28 +72,28 @@ const homePageMod = (() => {
         return header;
     }
 
-
-    const makeBodyContent = ()=> {
+    // create body content for homepage
+    const makeBodyContent = () => {
         const bodyContainer = document.createElement("div");
         const bodyTitle = document.createElement("h2");
         const bodyDescription = document.createElement("p");
         const bodyButton = document.createElement("button");
-        
+
         bodyContainer.classList.add("body-home-container");
         bodyTitle.setAttribute("id", "body-title");
         bodyDescription.classList.add("body-description");
         bodyButton.classList.add("body-button");
 
         bodyTitle.textContent = "Best Waffle Restaurant";
-        bodyDescription.textContent = loremIpsum({count:3});
+        bodyDescription.textContent = loremIpsum({ count: 3 });
         bodyButton.textContent = "Order Now";
 
         bodyContainer.append(bodyTitle, bodyDescription, bodyButton);
-        
+
         return bodyContainer;
     }
 
-
+    // CXreate homepage
     function createHomePage() {
 
         return content.append(makeHeader(), makeBodyContent());
