@@ -44,16 +44,13 @@ const homePageMod = (() => {
 
         headerImage1.classList.add("header-icon");
         headerImage1.src = '../src/icons/account(1).svg';
-        headerImage1.style.height = "2rem";
-
+        
         headerImage2.classList.add("header-icon");
         headerImage2.src = '../src/icons/cart.svg';
-        headerImage2.style.height = "2rem";
-
+        
         headerImage3.classList.add("header-icon");
         headerImage3.src = '../src/icons/magnify(1).svg';
-        headerImage3.style.height = "2rem";
-
+       
         headerButton.classList.add("header-button");
         headerButton.textContent = "Order Online";
 
