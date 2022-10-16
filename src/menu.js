@@ -1,3 +1,10 @@
+import image1 from './icons/waffles.png';
+import image2 from './icons/waffleButter.png';
+import image3 from './icons/waffles-no-butter.png';
+import image4 from './icons/waffeStrawberry.png';
+import image5 from './icons/waffle-cup-ice-cream.png';
+import image6 from './icons/blueWaffle.png';
+ 
 
 // Create Menu Page
 const menuPageMod = (() => {
@@ -26,22 +33,22 @@ const menuPageMod = (() => {
       }
 
       // Menu items 
-      menuItemCard[0].firstChild.src = '../src/icons/waffles.png';
+      menuItemCard[0].firstChild.src = image1;
       menuItemCard[0].lastChild.textContent = "Belgian Waffles";
 
-      menuItemCard[1].firstChild.src = `../src/icons/waffleButter.png`;
+      menuItemCard[1].firstChild.src = image2;
       menuItemCard[1].lastChild.textContent = 'Waffle with butter';
 
-      menuItemCard[2].firstChild.src = `../src/icons/waffles-no-butter.png`;
+      menuItemCard[2].firstChild.src = image3;
       menuItemCard[2].lastChild.textContent = 'Waffle w/o butter';
 
-      menuItemCard[3].firstChild.src = `../src/icons/waffeStrawberry.png`;
+      menuItemCard[3].firstChild.src = image4;
       menuItemCard[3].lastChild.textContent = 'Strawberry Waffles';
 
-      menuItemCard[4].firstChild.src = `../src/icons/waffle-cup-ice-cream.png`
+      menuItemCard[4].firstChild.src = image5;
       menuItemCard[4].lastChild.textContent = 'Ice Cream Waffle Cup';
 
-      menuItemCard[5].firstChild.src = `../src/icons/blueWaffle.png`;
+      menuItemCard[5].firstChild.src = image6;
       menuItemCard[5].lastChild.textContent = 'Blue Waffles';
 
       menuContainer.classList.add('menu-container');

@@ -1,5 +1,8 @@
 // import relevant packages
 import { loremIpsum } from "lorem-ipsum";
+import image1 from './icons/cart.svg';
+import image2 from './icons/magnify(1).svg';
+import image3 from './icons/account(1).svg';
 
 
 // Create homePage Module
@@ -46,13 +49,13 @@ const homePageMod = (() => {
         iconContainer.classList.add("icon-container");
 
         headerImage1.classList.add("header-icon");
-        headerImage1.src = '../src/icons/account(1).svg';
+        headerImage1.src = image3;
 
         headerImage2.classList.add("header-icon");
-        headerImage2.src = '../src/icons/cart.svg';
+        headerImage2.src = image1;
 
         headerImage3.classList.add("header-icon");
-        headerImage3.src = '../src/icons/magnify(1).svg';
+        headerImage3.src = image2;
 
         headerButton.classList.add("header-button");
         headerButton.textContent = "Order Online";
